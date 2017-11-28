@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import { Appregistry, StyleSheet, Text, View } from 'react-native';
+import { Appregistry, Text, View } from 'react-native';
+import styles from './app/styles';
 import * as firebase from 'firebase';
-import { API_KEY, AUTH_DOMAINE, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET } from "react-native-dotenv"
-
-const firebaseConfig = {
-  apiKey: API_KEY,
-  authDomain: AUTH_DOMAINE,
-  databaseURL: DATABASE_URL,
-  projectId: PROJECT_ID,
-  storageBucket: STORAGE_BUCKET
-}
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+import firebaseApp from './app/config/data'
 
 export default class App extends Component {
   constructor(props) {
@@ -30,17 +22,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 150,
-    paddingLeft: 25,
-    paddingRight: 25
-  },
-  text: {
-    fontSize: 36
-  }
-});
