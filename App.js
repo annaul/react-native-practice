@@ -19,10 +19,10 @@ export default class App extends Component {
       <View style={styles.container}>
       <Image resizeMode='cover'
         style={styles.backgroundImage}
-        source={{uri: this.state.quote[2]['image']}}
+        source={{uri: this.state.quote[0]['image']}}
       />
         <Text style={styles.text}>
-          <Text>{this.state.quote[2]['text']}</Text>
+          <Text>{this.state.quote[0]['text']}</Text>
         </Text>
       </View>
     );
