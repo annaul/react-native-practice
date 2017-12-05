@@ -13,3 +13,6 @@ export const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 var storage = firebase.app().storage('gs://react-test-ba5ac.appspot.com');
 var storageRef = storage.ref();
+
+var presenceRef = firebase.database().ref("disconnectmessage");
+presenceRef.onDisconnect().set("I disconnected!");
